@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang ="it">
+ <head>   
+<h1>Segnalazioni in archivio </h1>
+</head>
+<body>
+<% for (var i=0; i<numSegnalazioni; i++){ %>
+    <%= segnalazioni[i].name %>, 
+    <%= segnalazioni[i].indirizzo %>, 
+    <%= segnalazioni[i].data %> <p></p>
+<% } %>
+</body>    
+</html>
