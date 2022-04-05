@@ -4,7 +4,6 @@ export class SegnalazioneModel {
     private descrizione:String;
     private indirizzo: String;
     private img: String;
-    private segnalazioni: SegnalazioneModel[];
     private i:number;
 
     public constructor(nome:String, descrizione:String, indirizzo:String, img:String) {
@@ -14,18 +13,12 @@ export class SegnalazioneModel {
         this.img;   
         
     }
-    public getSegnalazioni():SegnalazioneModel[]{
-        return this.segnalazioni;
+
+    //TODO creare metodi get
+
+    public getSegnalazioni():SegnalazioneModel{
+        return this;
     }
-
-    public addSegnalazione(seg:SegnalazioneModel){
-        var i=0;
-        this.segnalazioni[i]=seg;
-        i++;
-    }
-
-   
-
 }
 
 
