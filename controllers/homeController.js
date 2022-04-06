@@ -21,5 +21,5 @@ exports.postHomeController = (req, res, next) => {
     segnalazioneModel.addSegnalazioni(mySgn);
     
     console.log(mySgn.nome,mySgn.descrizione,mySgn.indirizzo,mySgn.img);
-    
+    res.render('home.ejs');
   };
