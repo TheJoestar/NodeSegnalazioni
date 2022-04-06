@@ -17,12 +17,12 @@ router.post('/home', postHomeController);
 /* GET segnalation page. */
 router.get('/segnalazioni', getSegnalazioniController);
 
-
+//d'ora in poi le get e le post così: "localhost:3000/*" non verrano considerate
+//NB: * significa tutte le parole possibili
 router.use(function(req, res, next){
   res.setHeader('Content-Type', 'text/plain');
   res.status(404).send('La pagina non esiste amico!');
 });
-
 
 /*app.listen(PORT, err => {
   if (err) return console.log(`Cannot Listen on PORT: ${PORT}`);
