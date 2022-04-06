@@ -7,9 +7,10 @@
 
 <!-- TODO Usare metodi get dei segnalazioneModel -->
 <% for (var i=0; i<numSegnalazioni; i++){ %>
-    <%= segnalazioni[i].name %>, 
-    <%= segnalazioni[i].indirizzo %>, 
-    <%= segnalazioni[i].data %> <p></p>
+    <%= listaSegnalazioni[i].nome %>,
+    <%= listaSegnalazioni[i].descrizione %>, 
+    <%= listaSegnalazioni[i].indirizzo %>, 
+    <%= listaSegnalazioni[i].img %> <p></p>
 <% } %>
 </body>    
 </html>
