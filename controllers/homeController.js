@@ -1,5 +1,6 @@
 const segnalazioneModel = require("../models/segnalazioneModel");
 const { SegnalazioneModel } = require("../models/SegnModel");
+const postgres = require("../factory/postgresConnection");
 //Controllers che riceve le get e le post di /home
 
 exports.getHomeController = (req, res, next) => {
@@ -19,7 +20,7 @@ exports.postHomeController = (req, res, next) => {
     mySgn.indirizzo = req.body.indirizzo;
     mySgn.img = req.body.img;
     segnalazioneModel.addSegnalazioni(mySgn);
-    
+   
     console.log(mySgn.nome,mySgn.descrizione,mySgn.indirizzo,mySgn.img);
     res.render('home.ejs');
   };
