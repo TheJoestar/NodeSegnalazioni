@@ -1,12 +1,13 @@
+const { FakeSegnalazioni } = require("../fakeDB/FakeSegnalazioni");
 const { SegnalazioneModel } = require("../models/SegnModel");
 
 //vettore di segnalazioni di tipo SegnalazioneModel
-const listaSegnalazioni = [];
+  const listSegnalazione = new FakeSegnalazioni();
   
   exports.addSegnalazioni = (segnalazione) => {
-    listaSegnalazioni.push(segnalazione);
+    listSegnalazione.addSegnalazione(segnalazione);
   }
 
   exports.getSegnalazioni = () => {
-    return listaSegnalazioni;
+    return listSegnalazione.getAllSegnalazioni();
   };

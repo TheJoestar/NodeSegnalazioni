@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <h1>Benvenuto! Qui puoi segnalare! </h1>
 
-
-  <form action="home" method="post">
+  <!--* enctype="multipart/form-data" definisce come criptare i dati da inviare nel body della chiamata post -->
+  <form action="home" method="post" enctype="multipart/form-data" method="post">
+    
     <div class="form-row">
       <div class="col-md-4 mb-3">
         <label for="validationDefault01"> Nome</label>
         <input type="text" class="form-control" name="nome" id="validationDefault01" placeholder="Nome" value="Mark" required>
       </div>
+
       <div class="col-md-4 mb-3">
         <label for="validationDefault02">Descrizione</label>
         <input type="text" class="form-control" name="descrizione" id="validationDefault02" placeholder="Descrizione" value="Otto" required>
       </div>
       
     </div>
+
     <div class="form-row">
       <div class="col-md-6 mb-3">
         <label for="validationDefault03">Indirizzo</label>
@@ -22,8 +25,10 @@
     </div>
     
     <div class="custom-file">
-        <input type="file" name= "img" class="custom-file-input" id="customFile">
+        <input type="file" name="img" class="custom-file-input" id="customFile">
         <label class="custom-file-label" for="customFile">Carica foto</label>
-      </div>
-    <button class="btn btn-primary" type="submit">Invia segnalazione </button>
+    </div>
+
+    <input class="btn btn-primary" type="submit" name="btn_submit">Invia segnalazione
+  
   </form>
